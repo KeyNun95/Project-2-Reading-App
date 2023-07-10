@@ -14,6 +14,7 @@ const indexRoutes = require('./routes/index');
 // create the Express app
 const app = express();
 
+require('dotenv').config();
 // connect to the MongoDB with mongoose
 require('./config/database');
 // configure Passport
@@ -48,6 +49,8 @@ app.use(function (req, res, next) {
   // single ejs view
   next();
 });
+
+app.use(express.static(path.join(_dirname, 'public')));
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
