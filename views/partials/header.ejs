@@ -13,9 +13,8 @@
         <div class="nav-bar">
         <% if (user) { %>
             <a href="/user/profile">Profile</a>
-            <!-- <a href="/books/new">Add Book</a> -->
-        <% } else { %>
             <a href="/books/new">Add Book</a>
+        <% } else { %>
             <a href="/auth/google" class="login">Log In &nbsp;<img class="icon" src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
         </div>

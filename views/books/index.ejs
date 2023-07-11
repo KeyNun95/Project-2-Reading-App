@@ -13,8 +13,8 @@
                     <tr>
                         <td><%= b.title %></td>
                         <td><a href="/books/<%= b._id %>">Details</a></td>
-                        <td><%= b.buy %></td>
-                        <td><%= b.listen %></td>
+                        <td><a href="<%= b.buy %>">Amazon</a></td>
+                        <td><a href="<%= b.listen %>">Spotify</a></td>
                     </tr>
                 <% }) %>
             </tbody>
