@@ -18,3 +18,40 @@
 .collection-item form {
   margin-top: -5px;
 }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+.nav-bar {
+  margin-left: auto;
+}
+
+.icon {
+  height: 30px;
+}
+
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+}
