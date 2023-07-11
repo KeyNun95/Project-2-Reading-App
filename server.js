@@ -1,5 +1,4 @@
 // load the env consts
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
@@ -7,6 +6,7 @@ const cookieParser = require('cookie-parser');
 // session middleware
 const session = require('express-session');
 const passport = require('passport');
+require('dotenv').config();
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 
@@ -14,7 +14,6 @@ const indexRoutes = require('./routes/index');
 // create the Express app
 const app = express();
 
-require('dotenv').config();
 // connect to the MongoDB with mongoose
 require('./config/database');
 // configure Passport
@@ -50,7 +49,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(express.static(path.join(_dirname, 'public')));
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
