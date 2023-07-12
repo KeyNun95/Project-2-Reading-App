@@ -29,6 +29,6 @@ async function create(req, res) {
         res.redirect(`/books/${addedBook._id}`);
     } catch (err) {
         console.log(err);
-        res.render("books/new", {errorMsg: err.message});
+        res.render('books/new', {errorMsg: err.message});
     }
 }
