@@ -10,6 +10,4 @@ router.get('/:id', booksCtrl.show);
 
 router.post('/', booksCtrl.create);
 
-router.put('/:id', booksCtrl.update);
-
 module.exports = router;

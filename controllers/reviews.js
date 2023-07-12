@@ -2,7 +2,8 @@ const BookModel = require('../models/book');
 
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    updateReview
 };
 
 async function create(req, res) {
@@ -28,4 +29,15 @@ async function deleteReview(req, res, next) {
     } catch(err) {
         next(err);
     }
+}
+
+async function updateReview(req, res) {
+    const book = await BookModel.findOne({'reviews._id': req.params.id})
+    console.log(book);
+        const reviewDoc = book.reviews.id(req.params.id);
+        console.log(reviewDoc);
+        if (!reviewDoc.user.equals(req.user._id)) return res.redirect(`books/${book._id}`);
+        reviewDoc.content = req.body.content;
+        await book.save();
+            res.redirect(`/books/${book._id}`);
 }

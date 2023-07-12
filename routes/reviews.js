@@ -6,4 +6,6 @@ router.post('/books/:id/reviews', reviewsCtrl.create);
 
 router.delete('/reviews/:id', reviewsCtrl.delete);
 
+router.put('/reviews/:id', reviewsCtrl.updateReview);
+
 module.exports = router;

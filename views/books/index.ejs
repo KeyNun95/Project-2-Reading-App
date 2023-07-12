@@ -13,9 +13,9 @@
                 <% books.forEach(function(b) { %>
                     <tr>
                         <td><%= b.title %></td>
-                        <td><a href="/books/<%= b._id %>">Details</a></td>
                         <td><a href="<%= b.buy %>">Amazon</a></td>
                         <td><a href="<%= b.listen %>">Spotify</a></td>
+                        <td><a href="/books/<%= b._id %>">Details</a></td>
                     </tr>
                 <% }) %>
             </tbody>
