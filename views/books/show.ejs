@@ -17,3 +17,45 @@
         <%= book.reviews %>
     </div>
 </section>
+
+<br><br>
+<h2>Reviews</h2>
+
+<% if (user) { %>
+    <form id="add-review" method="POST" action="/books/<%= book._id %>/reviews">
+        <label>Review:</label>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Add Review">
+    </form>
+<% } else { %>
+    <p>Please login to leave a review</p>
+<% } %>
+
+<% if(book.reviews.length) { %>
+    <table>
+        <thread>
+            <tr>
+                <th>User</th>
+                <th>Date</th>
+                <th>Review</th>
+            </tr>
+        </thread>
+        <tbody>
+            <% book.reviews.forEach(function(r) { %>
+                <tr>
+                    <td class="review-user"><%= r.userName %></td>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
+                    <td><%= r.content %></td>
+                    <td><% if(user && user._id.equals(r.user)) { %>
+                        <form action="/reviews/<%=" r._id %>?_method=DELETE" method="POST">
+                            <button type="submit">X</button>
+                        </form>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <% } else { %>
+        <h5>No Reviews Yet</h5>
+    <% } %>
