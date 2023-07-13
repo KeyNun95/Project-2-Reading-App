@@ -65,11 +65,7 @@ h1 {
 }
 
 h2 {
-  padding: 0 20px 0 30px;
-}
-
-#list {
-  padding: 0 20px 0 30px;
+  margin-right: 300px;
 }
 
 #new-form {
@@ -80,31 +76,59 @@ h2 {
 
 #new-form input[type="submit"] {
   grid-column: span 2;
-  width: 10rem;
+  width: 60px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 150px;
+  border: red solid;
+  background-color: red;
+  border-radius: 5px;
+}
+
+#new-form input {
+  border: white solid;
+  background-color: black;
+}
+
+input[type="text"].box {
+  height: 50px;
 }
 
 button {
   color: black;
-  border-radius: 15px;
+  border-radius: 5px;
   height: 30px;
 }
+
 .block {
   background-color: red;
+  border: red solid;
 }
 
 .amazon {
   background-color: yellow;
+  border: yellow solid;
+  width: 70px;
+  margin-left: 50px;
 }
 
 .spotify {
   background-color: rgb(61, 212, 61);
+  border: rgb(61, 212, 61) solid;
+  width: 70px;
+  margin-left: 10px;
 }
 
 .details {
   color: aqua;
 }
 
-#show-page {
-  display: grid;
-  grid-template-columns: auto auto;
+section > h2 {
+  display: flex;
 }
+
+/* #show-page h2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+} */

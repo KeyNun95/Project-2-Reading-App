@@ -23,10 +23,9 @@ function newBook(req, res) {
 }
 
 async function create(req, res) {
+    req.body.user = req.user._id;
     try {
         const addedBook = await BookModel.create(req.body);
-        req.body.user = req.user._id;
-        req.body.userName = req.user.name;
         console.log(addedBook);
         res.redirect(`/books/${addedBook._id}`);
     } catch (err) {
