@@ -26,9 +26,9 @@
 
 body {
   margin: 0;
-  background-color: grey;
+  background-color: black;
   height: 100vh;
-  color: aqua;
+  color: white;
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas:
@@ -60,6 +60,10 @@ body > main {
   height: 30px;
 }
 
+h1 {
+  color: yellow;
+}
+
 h2 {
   padding: 0 20px 0 30px;
 }
@@ -79,8 +83,28 @@ h2 {
   width: 10rem;
 }
 
-/* #show-page {
-  padding: 0 20px 0 30px;
+button {
+  color: black;
+  border-radius: 15px;
+  height: 30px;
+}
+.block {
+  background-color: red;
+}
+
+.amazon {
+  background-color: yellow;
+}
+
+.spotify {
+  background-color: rgb(61, 212, 61);
+}
+
+.details {
+  color: aqua;
+}
+
+#show-page {
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 10rem));
-} */
+  grid-template-columns: auto auto;
+}

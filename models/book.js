@@ -10,6 +10,7 @@ const reviewSchema = new Schema({
 });
 
 const bookSchema = new mongoose.Schema({
+    user: { type: Schema.Types.ObjectId, ref: 'User'},
     title: { type: String},
     author: { type: String},
     synopsis: { type: String},
