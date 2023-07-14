@@ -72,6 +72,7 @@ h2 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 10rem));
+  color: white;
 }
 
 #new-form input[type="submit"] {
@@ -83,11 +84,6 @@ h2 {
   border: red solid;
   background-color: red;
   border-radius: 5px;
-}
-
-#new-form input {
-  border: white solid;
-  background-color: black;
 }
 
 input[type="text"].box {
@@ -123,12 +119,22 @@ button {
   color: aqua;
 }
 
-section > h2 {
-  display: flex;
+.show-page > div {
+  padding: 30px;
 }
 
-/* #show-page h2 {
+/* . tr{
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
 } */
+
+button[type="submit"] {
+  border: red solid;
+  background-color: red;
+  border-radius: 5px;
+}
+
+#add-review input[type="submit"] {
+  border: red solid;
+  background-color: red;
+  border-radius: 5px;
+}
