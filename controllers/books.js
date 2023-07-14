@@ -15,6 +15,7 @@ async function index(req, res) {
 
 async function show(req, res) {
     const book = await BookModel.findById(req.params.id);
+    console.log(book);
     res.render('books/show', {title: 'Book Detail', book});
 }
 

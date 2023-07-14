@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const userCtrl = require('../controllers/users');
 
-router.get('/profile', userCtrl.profile);
+// router.get('/profile', userCtrl.profile);
 
 // The root route renders our only view
 router.get('/', function(req, res, next) {
