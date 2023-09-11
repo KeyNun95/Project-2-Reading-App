@@ -9,6 +9,7 @@ Technologies used:
 -Mongodb
 
 Getting Started
+Link to deploy: https://good-jade-octopus-tam.cyclic.app
 
 Icebox Items
 -Add a Profile page where users can see a list of the books they have read
